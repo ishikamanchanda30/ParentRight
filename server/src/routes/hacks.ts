@@ -1,6 +1,7 @@
-const express = require("express");
+import express, { Request, Response } from "express";
 const router = express.Router();
-router.route("/hacks" , (req : any,res: any) => {
-    res.status(200).json({message: "hi"});
-})
+
+router.route("/hacks").get((req: Request, res: Response) => {
+  res.status(200).send("hi");
+});
 export default router;
